@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F23086A-B92B-4808-A184-0856909CDDE8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SistemaHorariosHESAR</RootNamespace>
+    <AssemblyName>SistemaHorariosHESAR</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Asignatura.cs" />
+    <Compile Include="Bloque.cs" />
+    <Compile Include="Colegio.cs" />
+    <Compile Include="Conexion.cs" />
+    <Compile Include="Control_Asignaturas.cs" />
+    <Compile Include="Control_Bloques.cs" />
+    <Compile Include="Control_Colegios.cs" />
+    <Compile Include="Control_Cursos.cs" />
+    <Compile Include="Control_Niveles.cs" />
+    <Compile Include="Control_Periodo.cs" />
+    <Compile Include="Control_Profesores.cs" />
+    <Compile Include="Control_Salas.cs" />
+    <Compile Include="Control_Sedes.cs" />
+    <Compile Include="Control_Tipodebloque.cs" />
+    <Compile Include="CtrlUsuarios.cs" />
+    <Compile Include="Curso.cs" />
+    <Compile Include="FrmRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistro.Designer.cs">
+      <DependentUpon>FrmRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginHesar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginHesar.Designer.cs">
+      <DependentUpon>LoginHesar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloUsuario.cs" />
+    <Compile Include="Nivel.cs" />
+    <Compile Include="Periodo.cs" />
+    <Compile Include="Profesor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sala.cs" />
+    <Compile Include="Sede.cs" />
+    <Compile Include="Tipodebloque.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="VistaAsignaturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaAsignaturas.Designer.cs">
+      <DependentUpon>VistaAsignaturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaBloques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaBloques.Designer.cs">
+      <DependentUpon>VistaBloques.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaColegios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaColegios.Designer.cs">
+      <DependentUpon>VistaColegios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaCursos.Designer.cs">
+      <DependentUpon>VistaCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaCurso_periodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaCurso_periodo.Designer.cs">
+      <DependentUpon>VistaCurso_periodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaNiveles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaNiveles.Designer.cs">
+      <DependentUpon>VistaNiveles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaPeriodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaPeriodos.Designer.cs">
+      <DependentUpon>VistaPeriodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaProfesores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaProfesores.Designer.cs">
+      <DependentUpon>VistaProfesores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaSalas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaSalas.Designer.cs">
+      <DependentUpon>VistaSalas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaSedes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaSedes.Designer.cs">
+      <DependentUpon>VistaSedes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaTipoBloque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaTipoBloque.Designer.cs">
+      <DependentUpon>VistaTipoBloque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaUsuarios.Designer.cs">
+      <DependentUpon>VistaUsuarios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmRegistro.resx">
+      <DependentUpon>FrmRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginHesar.resx">
+      <DependentUpon>LoginHesar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="VistaAsignaturas.resx">
+      <DependentUpon>VistaAsignaturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaBloques.resx">
+      <DependentUpon>VistaBloques.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaColegios.resx">
+      <DependentUpon>VistaColegios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaCursos.resx">
+      <DependentUpon>VistaCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaCurso_periodo.resx">
+      <DependentUpon>VistaCurso_periodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaNiveles.resx">
+      <DependentUpon>VistaNiveles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaPeriodos.resx">
+      <DependentUpon>VistaPeriodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaProfesores.resx">
+      <DependentUpon>VistaProfesores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaSalas.resx">
+      <DependentUpon>VistaSalas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaSedes.resx">
+      <DependentUpon>VistaSedes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaTipoBloque.resx">
+      <DependentUpon>VistaTipoBloque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaUsuarios.resx">
+      <DependentUpon>VistaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\Asignatura.datasource" />
+    <None Include="Properties\DataSources\Bloque.datasource" />
+    <None Include="Properties\DataSources\Colegio.datasource" />
+    <None Include="Properties\DataSources\Nivel.datasource" />
+    <None Include="Properties\DataSources\Profesor.datasource" />
+    <None Include="Properties\DataSources\Sala.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
